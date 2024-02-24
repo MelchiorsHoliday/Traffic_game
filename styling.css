@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.room {
+    margin: auto;
+    border: 4px solid black;
+    height: 700px;
+    width: 500px;
+    overflow: hidden;
+}
+.character {
+    border: 2px solid blue;
+    height: 20px;
+    width: 10px;
+    position: absolute;
+    background-color: blue;
+}
+
+
+.boss {
+    border: 2px solid purple;
+    position: relative;
+    height: 20px;
+    width: 10px;
+    top:400px;
+    background-color: purple;
+}
+
+.mission_end {
+    position: absolute;
+    border: 2px solid green;
+    height: 7px;
+    width: 488px;
+    top:690px;
+    background-color: green;
+}
+
+/* Obstacles */
+
+.obstaclesL1 {
+    border: 2px solid red;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 300px;
+    left: 490px;
+    background-color: red;
+    animation: obstaclesL1 2s infinite linear;
+}
+
+.obstaclesR1 {
+    border: 2px solid brown;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 300px;
+    left: 1px;
+    background-color: brown;
+    animation: obstaclesR1 2s infinite linear;
+}
+
+.obstaclesL2 {
+    border: 2px solid orange;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 200px;
+    left: 490px;
+    background-color: orange;
+    animation: obstaclesL2 2s infinite linear;
+}
+
+.obstaclesR2 {
+    border: 2px solid violet;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 200px;
+    left: 1px;
+    background-color: violet;
+    animation: obstaclesR2 2s infinite linear;
+}
+
+.obstaclesL3 {
+    border: 2px solid yellow;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 100px;
+    left: 490px;
+    background-color: yellow;
+    animation: obstaclesL3 2s infinite linear;
+}
+
+.obstaclesR3 {
+    border: 2px solid indigo;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 100px;
+    left: 1px;
+    background-color: indigo;
+    animation: obstaclesR3 2s infinite linear;
+}
+
+.obstaclesL4 {
+    border: 2px solid green;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 50px;
+    left: 490px;
+    background-color: green;
+    animation: obstaclesL4 2s infinite linear;
+}
+
+.obstaclesR4 {
+    border: 2px solid fuchsia;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 90px;
+    left: 1px;
+    background-color: fuchsia;
+    animation: obstaclesR4 2s infinite linear;
+}
+
+/* Animations */
+
+@keyframes obstaclesL1 {
+    0% {left: 500px;}
+    50% {left: 200px;}
+    100% {left: -10px;}
+}
+
+@keyframes obstaclesR1 {
+    0% {left: 0px;}
+    50% {left: 250px;}
+    100% {left: 500px;}
+}
+
+@keyframes obstaclesL2 {
+    0% {left: 500px;}
+    50% {left: 200px;}
+    100% {left: -10px;}
+}
+
+@keyframes obstaclesR2 {
+    0% {left: 0px;}
+    50% {left: 250px;}
+    100% {left: 500px;}
+}
+
+@keyframes obstaclesL3 {
+    0% {left: 500px;}
+    50% {left: 250px;}
+    100% {left: -20px;}
+}
+
+@keyframes obstaclesR3 {
+    0% {left: 0px;}
+    50% {left: 200px;}
+    100% {left: 490px;}
+}
+
+@keyframes obstaclesL4 {
+    0% {left: 500px;}
+    50% {left: 300px;}
+    100% {left: -30px;}
+}
+
+@keyframes obstaclesR4 {
+    0% {left: 0px;}
+    50% {left: 150px;}
+    100% {left: 480px;}
+}
