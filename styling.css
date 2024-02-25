@@ -43,17 +43,19 @@
 .obstaclesL1 {
     border: 2px solid red;
     height: 20px;
-    width: 10px;
+    width: 30px;
     position: relative;
     top: 300px;
     left: 490px;
     background-color: red;
     animation: obstaclesL1 2s infinite linear;
+    animation-duration: calc(5s + (10s - 5s) * random());
+    animation-delay: calc(1s + (5s - 1s) * random());
 }
 
 .obstaclesR1 {
     border: 2px solid brown;
-    height: 20px;
+    height: 40px;
     width: 10px;
     position: relative;
     top: 300px;
@@ -65,9 +67,9 @@
 .obstaclesL2 {
     border: 2px solid orange;
     height: 20px;
-    width: 10px;
+    width: 44px;
     position: relative;
-    top: 200px;
+    top: 400px;
     left: 490px;
     background-color: orange;
     animation: obstaclesL2 2s infinite linear;
@@ -76,9 +78,9 @@
 .obstaclesR2 {
     border: 2px solid violet;
     height: 20px;
-    width: 10px;
+    width: 100px;
     position: relative;
-    top: 200px;
+    top: 30px;
     left: 1px;
     background-color: violet;
     animation: obstaclesR2 2s infinite linear;
@@ -98,7 +100,7 @@
 .obstaclesR3 {
     border: 2px solid indigo;
     height: 20px;
-    width: 10px;
+    width: 90px;
     position: relative;
     top: 100px;
     left: 1px;
@@ -162,8 +164,10 @@
 
 @keyframes obstaclesR3 {
     0% {left: 0px;}
+    25% {left: 100px;}
     50% {left: 200px;}
-    100% {left: 490px;}
+    75% {left: 300px;}
+    100% {left: 500px;}
 }
 
 @keyframes obstaclesL4 {

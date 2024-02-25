@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Direction Animation</title>
+<style>
+    #movingDiv {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+    }
+
+    @keyframes topMove {
+        0% { top: -100px; }
+        100% { top: calc(100vh + 100px); }
+    }
+
+    @keyframes bottomMove {
+        0% { top: calc(100vh + 100px); }
+        100% { top: -100px; }
+    }
+
+    @keyframes leftMove {
+        0% { left: -100px; }
+        100% { left: calc(100vw + 100px); }
+    }
+
+    @keyframes rightMove {
+        0% { left: calc(100vw + 100px); }
+        100% { left: -100px; }
+    }
+</style>
+</head>
+<body>
+<div id="movingDiv"></div>
+
+<script>
+    function getRandomDirection() {
+        const directions = ['top', 'bottom', 'left', 'right'];
+        return directions[Math.floor(Math.random() * directions.length)];
+    }
+
+    function moveDiv() {
+        const movingDiv = document.getElementById('movingDiv');
+        const direction = getRandomDirection();
+        let posX = Math.random() * (window.innerWidth - movingDiv.offsetWidth);
+        let posY = Math.random() * (window.innerHeight - movingDiv.offsetHeight);
+
+        switch (direction) {
+            case 'top':
+                posY = -movingDiv.offsetHeight;
+                break;
+            case 'bottom':
+                posY = window.innerHeight;
+                break;
+            case 'left':
+                posX = -movingDiv.offsetWidth;
+                break;
+            case 'right':
+                posX = window.innerWidth;
+                break;
+        }
+
+        movingDiv.style.left = posX + 'px';
+        movingDiv.style.top = posY + 'px';
+
+        movingDiv.style.animation = `${direction}Move 3s linear forwards`;
+        movingDiv.addEventListener('animationend', moveDiv); // Listen for animationend event to restart animation
+    }
+
+    moveDiv();
+</script>
+</body>
+</html>
