@@ -5,7 +5,7 @@
 }
 
 .room {
-    margin: auto;
+    margin: 100px auto auto auto;
     border: 4px solid black;
     height: 700px;
     width: 500px;
@@ -15,6 +15,7 @@
     border: 2px solid blue;
     height: 20px;
     width: 10px;
+    left: 50%;
     position: absolute;
     background-color: blue;
 }
@@ -30,11 +31,12 @@
 }
 
 .mission_end {
-    position: absolute;
+    overflow: hidden;
+    position: relative;
     border: 2px solid green;
-    height: 7px;
-    width: 488px;
-    top:690px;
+    height: 10%;
+    width: 100%;
+    /* bottom:0%; */
     background-color: green;
 }
 
@@ -42,142 +44,188 @@
 
 .obstaclesL1 {
     border: 2px solid red;
-    height: 20px;
-    width: 30px;
+    height: 5%;
+    width: 20%;
     position: relative;
-    top: 300px;
+    top: 8%;
     left: 490px;
     background-color: red;
     animation: obstaclesL1 2s infinite linear;
-    animation-duration: calc(5s + (10s - 5s) * random());
-    animation-delay: calc(1s + (5s - 1s) * random());
-}
+    animation-delay:1s;
+} 
 
 .obstaclesR1 {
     border: 2px solid brown;
-    height: 40px;
-    width: 10px;
+    height: 10%;
+    width: 32%;
     position: relative;
-    top: 300px;
+    top: calc(var(--random-number2) * 1px);
     left: 1px;
     background-color: brown;
     animation: obstaclesR1 2s infinite linear;
+    animation-delay:5s;
 }
 
 .obstaclesL2 {
     border: 2px solid orange;
-    height: 20px;
-    width: 44px;
+    height: 10%;
+    width: 22%;
     position: relative;
-    top: 400px;
+    top: calc(var(--random-number3) * 1px);
     left: 490px;
     background-color: orange;
     animation: obstaclesL2 2s infinite linear;
+    animation-delay: 2s;
+    border-radius: 55%;
 }
 
 .obstaclesR2 {
     border: 2px solid violet;
-    height: 20px;
+    height: 10%;
     width: 100px;
     position: relative;
-    top: 30px;
+    top: calc(var(--random-number4) * 1px);
     left: 1px;
     background-color: violet;
     animation: obstaclesR2 2s infinite linear;
+    animation-delay: 1s;
 }
 
 .obstaclesL3 {
     border: 2px solid yellow;
-    height: 20px;
-    width: 10px;
+    height: 10%;
+    width: 44%;
     position: relative;
-    top: 100px;
     left: 490px;
+    top: calc(var(--random-number5) * 1px);
     background-color: yellow;
     animation: obstaclesL3 2s infinite linear;
+    animation-delay: 4s;
 }
 
 .obstaclesR3 {
     border: 2px solid indigo;
-    height: 20px;
+    height: 10%;
     width: 90px;
     position: relative;
-    top: 100px;
+    top: calc(var(--random-number6) * 1px);
     left: 1px;
     background-color: indigo;
     animation: obstaclesR3 2s infinite linear;
+    animation-delay: 1.5s;
+    border-radius: 15%;
 }
 
 .obstaclesL4 {
     border: 2px solid green;
-    height: 20px;
-    width: 10px;
+    height: 10%;
+    width: 40px;
     position: relative;
-    top: 50px;
+    top: calc(var(--random-number7) * 1px);
     left: 490px;
     background-color: green;
     animation: obstaclesL4 2s infinite linear;
+    animation-delay: 3.1s;
+    border-radius: 15%;
 }
 
 .obstaclesR4 {
     border: 2px solid fuchsia;
-    height: 20px;
-    width: 10px;
+    height: 20%;
+    border-radius: 15%;
+    width: 60%;
     position: relative;
-    top: 90px;
+    top: calc(var(--random-number8) * 1px);
     left: 1px;
     background-color: fuchsia;
     animation: obstaclesR4 2s infinite linear;
+    animation-delay: 1.1s;
 }
 
 /* Animations */
 
 @keyframes obstaclesL1 {
-    0% {left: 500px;}
-    50% {left: 200px;}
-    100% {left: -10px;}
+    0% {right: 500px;}
+    20% {right: 100px;}
+    50% {right: 200px;}
+    100% {left: -200px;}
 }
 
 @keyframes obstaclesR1 {
-    0% {left: 0px;}
-    50% {left: 250px;}
-    100% {left: 500px;}
+    0% {left: -200px;}
+    45% {left: 100px;}
+    50% {left: 150px;}
+    85% {left: 160px;}
+    100% {left: 480px;}
 }
 
 @keyframes obstaclesL2 {
-    0% {left: 500px;}
-    50% {left: 200px;}
-    100% {left: -10px;}
+    0% {right: 500px;}
+    20% {right: 100px;}
+    50% {right: 200px;}
+    100% {left: -200px;}
 }
 
 @keyframes obstaclesR2 {
-    0% {left: 0px;}
-    50% {left: 250px;}
-    100% {left: 500px;}
-}
-
-@keyframes obstaclesL3 {
-    0% {left: 500px;}
-    50% {left: 250px;}
-    100% {left: -20px;}
-}
-
-@keyframes obstaclesR3 {
-    0% {left: 0px;}
-    25% {left: 100px;}
-    50% {left: 200px;}
-    75% {left: 300px;}
-    100% {left: 500px;}
-}
-
-@keyframes obstaclesL4 {
-    0% {left: 500px;}
-    50% {left: 300px;}
-    100% {left: -30px;}
-}
-
-@keyframes obstaclesR4 {
-    0% {left: 0px;}
+    0% {left: -200px;}
+    45% {left: 100px;}
     50% {left: 150px;}
     100% {left: 480px;}
 }
+
+@keyframes obstaclesL3 {
+    0% {right: 500px;}
+    20% {right: 100px;}
+    50% {right: 200px;}
+    100% {left: -200px;}
+}
+
+@keyframes obstaclesR3 {
+    0% {left: -200px;}
+    45% {left: 100px;}
+    50% {left: 150px;}
+    100% {left: 480px;}
+}
+
+@keyframes obstaclesL4 {
+    0% {right: 500%;}
+    20% {right: 20%;}
+    50% {right: 55%;}
+    75% {right: 70%;}
+    100% {left: -200%;}
+}
+
+@keyframes obstaclesR4 {
+    0% {left: -200px;}
+    45% {left: 100px;}
+    50% {left: 150px;}
+    100% {left: 480px;}
+}
+
+
+/* 
+
+@keyframes obstaclesL4 {
+    0% {top: var(--random-top); left: calc(var(--random-left) * 1px);}
+    100% {top: var(--random-top); left: calc(var(--random-left) * 1px);}
+}
+
+@keyframes obstaclesR4 {
+    0%,
+    100% {top: var(--random-top); left: calc(var(--random-left) * 1px);}
+} */
+
+
+
+/* Random number reader*/
+/*
+
+@keyframes moveElement {
+    0% {top: var(--random-number5);
+        left: var(--random-left)}
+    
+    100% {
+        top: var(--random-top);
+        left: calc(var(--random-left) * 1px);
+    }
+} */
